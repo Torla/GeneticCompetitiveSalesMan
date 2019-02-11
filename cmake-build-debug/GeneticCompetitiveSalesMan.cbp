@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.cpp">
+			<Option target="GeneticCompetitiveSalesMan"/>
+		</Unit>
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h">
+			<Option target="GeneticCompetitiveSalesMan"/>
+		</Unit>
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.cpp">
+			<Option target="GeneticCompetitiveSalesMan"/>
+		</Unit>
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h">
+			<Option target="GeneticCompetitiveSalesMan"/>
+		</Unit>
 		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>

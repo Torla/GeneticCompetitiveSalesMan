@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj"
   "CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj"
   "CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj"
+  "CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj"
+  "CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj"
   "GeneticCompetitiveSalesMan.pdb"
   "GeneticCompetitiveSalesMan.exe"
   "GeneticCompetitiveSalesMan.exe.manifest"

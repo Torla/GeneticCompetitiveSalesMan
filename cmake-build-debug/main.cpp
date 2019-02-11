@@ -1,19 +1,24 @@
 #include <iostream>
 
-#include "graphs/Graph.h"
-#include "graphs/Path.h"
-#include "solution/Solution.h"
+#include "genetic/Chromosome.h"
+
 
 using namespace std;
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
 
-	Graph graph(20,0,100);
+	Random::init(time(nullptr));
 
-	Solution solution(&graph);
+	Graph graph(5,0,100);
 
-	cout << solution ;
+	Chromosome solution(&graph);
+	Chromosome solution1(&graph);
+	Chromosome solution3(solution,solution1);
+
+
+	cout << solution << solution.evaluateCost() << endl ;
+	cout << solution1 << solution1.evaluateCost() << endl ;
+	cout << solution3 << solution3.evaluateCost() << endl ;
 
 	return 0;
 }
