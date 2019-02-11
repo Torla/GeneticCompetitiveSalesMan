@@ -1,24 +1,33 @@
 #include <iostream>
 
 #include "genetic/Chromosome.h"
+#include "genetic/Population.h"
 
 
 using namespace std;
+
+struct Interval
+{
+	int start, end;
+};
+
+bool compareInterval(Interval *i1, Interval *i2)
+{
+	return (i1->start < i2->start);
+}
+
 
 int main() {
 
 	Random::init(time(nullptr));
 
-	Graph graph(5,0,100);
+	Graph graph(20,0,100);
 
-	Chromosome solution(&graph);
-	Chromosome solution1(&graph);
-	Chromosome solution3(solution,solution1);
+	Population population(&graph,1000);
 
+	Solution sol = population.best();
 
-	cout << solution << solution.evaluateCost() << endl ;
-	cout << solution1 << solution1.evaluateCost() << endl ;
-	cout << solution3 << solution3.evaluateCost() << endl ;
+	cout << sol << sol.evaluateCost();
 
 	return 0;
 }

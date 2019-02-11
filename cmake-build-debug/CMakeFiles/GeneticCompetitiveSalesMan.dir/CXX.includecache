@@ -24,6 +24,16 @@ C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/soluti
 ../Rand.h
 C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h
 
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.cpp
+Population.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h
+
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h
+vector
+-
+Chromosome.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h
+
 C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.cpp
 Graph.h
 C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.h
@@ -63,6 +73,8 @@ iostream
 -
 genetic/Chromosome.h
 C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h
+genetic/Population.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h
 
 C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.cpp
 Solution.h
