@@ -6,41 +6,41 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.cpp
 Rand.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.h
 random
 -
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.cpp
 Chromosome.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.h
 ../solution/Solution.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/solution/Solution.h
 ../Rand.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Population.cpp
 Population.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Population.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Population.h
 vector
 -
 Chromosome.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Graph.cpp
 Graph.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Graph.h
 Path.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Graph.h
 array
 -
 random
@@ -48,49 +48,49 @@ random
 time.h
 -
 Matrix.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Matrix.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Matrix.h
 Path.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Matrix.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Matrix.h
 vector
 -
 stdexcept
 -
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.cpp
 Path.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.h
 vector
 -
 stdexcept
 -
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/main.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/main.cpp
 iostream
 -
 genetic/Chromosome.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.h
 genetic/Population.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Population.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.cpp
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/solution/Solution.cpp
 Solution.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/solution/Solution.h
 
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/solution/Solution.h
 algorithm
 -
 random
 -
 ../graphs/Path.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.h
 ../graphs/Graph.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Graph.h
 ../Rand.h
-C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h
+C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.h
 iostream
 -
 

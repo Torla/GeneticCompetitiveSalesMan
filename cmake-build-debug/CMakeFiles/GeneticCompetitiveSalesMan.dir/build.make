@@ -56,194 +56,194 @@ include CMakeFiles/GeneticCompetitiveSalesMan.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\main.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\main.cpp
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\main.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\main.cpp
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\main.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\main.cpp.i
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\main.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\main.cpp.i
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\main.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\main.cpp.s
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\main.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\main.cpp.s
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.requires:
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.requires:
 
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.requires
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.requires
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.provides
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.provides
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj
-
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj: graphs/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\graphs\Graph.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\graphs\Graph.cpp
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\graphs\Graph.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\graphs\Graph.cpp.i
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\graphs\Graph.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\graphs\Graph.cpp.s
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.requires:
-
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.requires
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.provides
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj
 
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj: graphs/Path.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\graphs\Path.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\graphs\Path.cpp
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj: ../src/graphs/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\graphs\Graph.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\graphs\Graph.cpp
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\graphs\Path.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\graphs\Path.cpp.i
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\graphs\Graph.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\graphs\Graph.cpp.i
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\graphs\Path.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\graphs\Path.cpp.s
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\graphs\Graph.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\graphs\Graph.cpp.s
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.requires:
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.requires:
 
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.requires
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.requires
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.provides
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.provides
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj
-
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj: solution/Solution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\solution\Solution.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\solution\Solution.cpp
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\solution\Solution.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\solution\Solution.cpp.i
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\solution\Solution.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\solution\Solution.cpp.s
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.requires:
-
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.requires
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.provides
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj
 
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj: genetic/Chromosome.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\genetic\Chromosome.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\genetic\Chromosome.cpp
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj: ../src/graphs/Path.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\graphs\Path.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\graphs\Path.cpp
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\genetic\Chromosome.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\genetic\Chromosome.cpp.i
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\graphs\Path.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\graphs\Path.cpp.i
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\genetic\Chromosome.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\genetic\Chromosome.cpp.s
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\graphs\Path.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\graphs\Path.cpp.s
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.requires:
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.requires:
 
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.requires
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.requires
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.provides
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.provides
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj
-
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj: Rand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\Rand.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\Rand.cpp
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\Rand.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\Rand.cpp.i
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\Rand.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\Rand.cpp.s
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.requires:
-
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.requires
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.provides
-
-CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj
 
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj: genetic/Population.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\genetic\Population.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\genetic\Population.cpp
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj: ../src/solution/Solution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\solution\Solution.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\solution\Solution.cpp
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\genetic\Population.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\genetic\Population.cpp.i
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\solution\Solution.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\solution\Solution.cpp.i
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\genetic\Population.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\genetic\Population.cpp.s
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\solution\Solution.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\solution\Solution.cpp.s
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.requires:
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.requires:
 
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.requires
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.requires
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.provides.build
-.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.provides
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.provides
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj
+
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj: ../src/genetic/Chromosome.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\genetic\Chromosome.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\genetic\Chromosome.cpp
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\genetic\Chromosome.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\genetic\Chromosome.cpp.i
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\genetic\Chromosome.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\genetic\Chromosome.cpp.s
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.requires:
+
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.requires
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.provides
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj
+
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj: ../src/Rand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\Rand.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\Rand.cpp
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\Rand.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\Rand.cpp.i
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\Rand.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\Rand.cpp.s
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.requires:
+
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.requires
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.provides
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj
+
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj: CMakeFiles/GeneticCompetitiveSalesMan.dir/flags.make
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj: ../src/genetic/Population.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\genetic\Population.cpp.obj -c C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\genetic\Population.cpp
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\genetic\Population.cpp > CMakeFiles\GeneticCompetitiveSalesMan.dir\src\genetic\Population.cpp.i
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\munfo\CLionProjects\GeneticCompetitiveSalesMan\src\genetic\Population.cpp -o CMakeFiles\GeneticCompetitiveSalesMan.dir\src\genetic\Population.cpp.s
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.requires:
+
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.requires
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.provides: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.provides.build
+.PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.provides
+
+CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.provides.build: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj
 
 
 # Object files for target GeneticCompetitiveSalesMan
 GeneticCompetitiveSalesMan_OBJECTS = \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj" \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj" \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj" \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj" \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj" \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj" \
-"CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj"
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj" \
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj" \
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj" \
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj" \
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj" \
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj" \
+"CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj"
 
 # External object files for target GeneticCompetitiveSalesMan
 GeneticCompetitiveSalesMan_EXTERNAL_OBJECTS =
 
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj
-GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj
+GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj
 GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/build.make
 GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/linklibs.rsp
 GeneticCompetitiveSalesMan.exe: CMakeFiles/GeneticCompetitiveSalesMan.dir/objects1.rsp
@@ -256,13 +256,13 @@ CMakeFiles/GeneticCompetitiveSalesMan.dir/build: GeneticCompetitiveSalesMan.exe
 
 .PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/build
 
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj.requires
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj.requires
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj.requires
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj.requires
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj.requires
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj.requires
-CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj.requires
+CMakeFiles/GeneticCompetitiveSalesMan.dir/requires: CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj.requires
 
 .PHONY : CMakeFiles/GeneticCompetitiveSalesMan.dir/requires
 

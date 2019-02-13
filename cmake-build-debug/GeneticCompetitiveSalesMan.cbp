@@ -82,46 +82,46 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/Rand.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/Rand.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Chromosome.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Chromosome.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Population.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/genetic/Population.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/genetic/Population.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Graph.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Graph.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Graph.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Matrix.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Matrix.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/graphs/Path.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/graphs/Path.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/main.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/main.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.cpp">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/solution/Solution.cpp">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
-		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/cmake-build-debug/solution/Solution.h">
+		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/src/solution/Solution.h">
 			<Option target="GeneticCompetitiveSalesMan"/>
 		</Unit>
 		<Unit filename="C:/Users/munfo/CLionProjects/GeneticCompetitiveSalesMan/CMakeLists.txt">

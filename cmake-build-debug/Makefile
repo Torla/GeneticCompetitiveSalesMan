@@ -122,194 +122,194 @@ GeneticCompetitiveSalesMan/fast:
 	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/build
 .PHONY : GeneticCompetitiveSalesMan/fast
 
-Rand.obj: Rand.cpp.obj
+src/Rand.obj: src/Rand.cpp.obj
 
-.PHONY : Rand.obj
-
-# target to build an object file
-Rand.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.obj
-.PHONY : Rand.cpp.obj
-
-Rand.i: Rand.cpp.i
-
-.PHONY : Rand.i
-
-# target to preprocess a source file
-Rand.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.i
-.PHONY : Rand.cpp.i
-
-Rand.s: Rand.cpp.s
-
-.PHONY : Rand.s
-
-# target to generate assembly for a file
-Rand.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/Rand.cpp.s
-.PHONY : Rand.cpp.s
-
-genetic/Chromosome.obj: genetic/Chromosome.cpp.obj
-
-.PHONY : genetic/Chromosome.obj
+.PHONY : src/Rand.obj
 
 # target to build an object file
-genetic/Chromosome.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.obj
-.PHONY : genetic/Chromosome.cpp.obj
+src/Rand.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.obj
+.PHONY : src/Rand.cpp.obj
 
-genetic/Chromosome.i: genetic/Chromosome.cpp.i
+src/Rand.i: src/Rand.cpp.i
 
-.PHONY : genetic/Chromosome.i
+.PHONY : src/Rand.i
 
 # target to preprocess a source file
-genetic/Chromosome.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.i
-.PHONY : genetic/Chromosome.cpp.i
+src/Rand.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.i
+.PHONY : src/Rand.cpp.i
 
-genetic/Chromosome.s: genetic/Chromosome.cpp.s
+src/Rand.s: src/Rand.cpp.s
 
-.PHONY : genetic/Chromosome.s
+.PHONY : src/Rand.s
 
 # target to generate assembly for a file
-genetic/Chromosome.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Chromosome.cpp.s
-.PHONY : genetic/Chromosome.cpp.s
+src/Rand.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/Rand.cpp.s
+.PHONY : src/Rand.cpp.s
 
-genetic/Population.obj: genetic/Population.cpp.obj
+src/genetic/Chromosome.obj: src/genetic/Chromosome.cpp.obj
 
-.PHONY : genetic/Population.obj
+.PHONY : src/genetic/Chromosome.obj
 
 # target to build an object file
-genetic/Population.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.obj
-.PHONY : genetic/Population.cpp.obj
+src/genetic/Chromosome.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.obj
+.PHONY : src/genetic/Chromosome.cpp.obj
 
-genetic/Population.i: genetic/Population.cpp.i
+src/genetic/Chromosome.i: src/genetic/Chromosome.cpp.i
 
-.PHONY : genetic/Population.i
+.PHONY : src/genetic/Chromosome.i
 
 # target to preprocess a source file
-genetic/Population.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.i
-.PHONY : genetic/Population.cpp.i
+src/genetic/Chromosome.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.i
+.PHONY : src/genetic/Chromosome.cpp.i
 
-genetic/Population.s: genetic/Population.cpp.s
+src/genetic/Chromosome.s: src/genetic/Chromosome.cpp.s
 
-.PHONY : genetic/Population.s
+.PHONY : src/genetic/Chromosome.s
 
 # target to generate assembly for a file
-genetic/Population.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/genetic/Population.cpp.s
-.PHONY : genetic/Population.cpp.s
+src/genetic/Chromosome.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Chromosome.cpp.s
+.PHONY : src/genetic/Chromosome.cpp.s
 
-graphs/Graph.obj: graphs/Graph.cpp.obj
+src/genetic/Population.obj: src/genetic/Population.cpp.obj
 
-.PHONY : graphs/Graph.obj
+.PHONY : src/genetic/Population.obj
 
 # target to build an object file
-graphs/Graph.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.obj
-.PHONY : graphs/Graph.cpp.obj
+src/genetic/Population.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.obj
+.PHONY : src/genetic/Population.cpp.obj
 
-graphs/Graph.i: graphs/Graph.cpp.i
+src/genetic/Population.i: src/genetic/Population.cpp.i
 
-.PHONY : graphs/Graph.i
+.PHONY : src/genetic/Population.i
 
 # target to preprocess a source file
-graphs/Graph.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.i
-.PHONY : graphs/Graph.cpp.i
+src/genetic/Population.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.i
+.PHONY : src/genetic/Population.cpp.i
 
-graphs/Graph.s: graphs/Graph.cpp.s
+src/genetic/Population.s: src/genetic/Population.cpp.s
 
-.PHONY : graphs/Graph.s
+.PHONY : src/genetic/Population.s
 
 # target to generate assembly for a file
-graphs/Graph.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Graph.cpp.s
-.PHONY : graphs/Graph.cpp.s
+src/genetic/Population.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/genetic/Population.cpp.s
+.PHONY : src/genetic/Population.cpp.s
 
-graphs/Path.obj: graphs/Path.cpp.obj
+src/graphs/Graph.obj: src/graphs/Graph.cpp.obj
 
-.PHONY : graphs/Path.obj
+.PHONY : src/graphs/Graph.obj
 
 # target to build an object file
-graphs/Path.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.obj
-.PHONY : graphs/Path.cpp.obj
+src/graphs/Graph.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.obj
+.PHONY : src/graphs/Graph.cpp.obj
 
-graphs/Path.i: graphs/Path.cpp.i
+src/graphs/Graph.i: src/graphs/Graph.cpp.i
 
-.PHONY : graphs/Path.i
+.PHONY : src/graphs/Graph.i
 
 # target to preprocess a source file
-graphs/Path.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.i
-.PHONY : graphs/Path.cpp.i
+src/graphs/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.i
+.PHONY : src/graphs/Graph.cpp.i
 
-graphs/Path.s: graphs/Path.cpp.s
+src/graphs/Graph.s: src/graphs/Graph.cpp.s
 
-.PHONY : graphs/Path.s
+.PHONY : src/graphs/Graph.s
 
 # target to generate assembly for a file
-graphs/Path.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/graphs/Path.cpp.s
-.PHONY : graphs/Path.cpp.s
+src/graphs/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Graph.cpp.s
+.PHONY : src/graphs/Graph.cpp.s
 
-main.obj: main.cpp.obj
+src/graphs/Path.obj: src/graphs/Path.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src/graphs/Path.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/graphs/Path.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.obj
+.PHONY : src/graphs/Path.cpp.obj
 
-main.i: main.cpp.i
+src/graphs/Path.i: src/graphs/Path.cpp.i
 
-.PHONY : main.i
+.PHONY : src/graphs/Path.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/graphs/Path.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.i
+.PHONY : src/graphs/Path.cpp.i
 
-main.s: main.cpp.s
+src/graphs/Path.s: src/graphs/Path.cpp.s
 
-.PHONY : main.s
+.PHONY : src/graphs/Path.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/graphs/Path.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/graphs/Path.cpp.s
+.PHONY : src/graphs/Path.cpp.s
 
-solution/Solution.obj: solution/Solution.cpp.obj
+src/main.obj: src/main.cpp.obj
 
-.PHONY : solution/Solution.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-solution/Solution.cpp.obj:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.obj
-.PHONY : solution/Solution.cpp.obj
+src/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-solution/Solution.i: solution/Solution.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : solution/Solution.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-solution/Solution.cpp.i:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.i
-.PHONY : solution/Solution.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-solution/Solution.s: solution/Solution.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : solution/Solution.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-solution/Solution.cpp.s:
-	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/solution/Solution.cpp.s
-.PHONY : solution/Solution.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/solution/Solution.obj: src/solution/Solution.cpp.obj
+
+.PHONY : src/solution/Solution.obj
+
+# target to build an object file
+src/solution/Solution.cpp.obj:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.obj
+.PHONY : src/solution/Solution.cpp.obj
+
+src/solution/Solution.i: src/solution/Solution.cpp.i
+
+.PHONY : src/solution/Solution.i
+
+# target to preprocess a source file
+src/solution/Solution.cpp.i:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.i
+.PHONY : src/solution/Solution.cpp.i
+
+src/solution/Solution.s: src/solution/Solution.cpp.s
+
+.PHONY : src/solution/Solution.s
+
+# target to generate assembly for a file
+src/solution/Solution.cpp.s:
+	$(MAKE) -f CMakeFiles\GeneticCompetitiveSalesMan.dir\build.make CMakeFiles/GeneticCompetitiveSalesMan.dir/src/solution/Solution.cpp.s
+.PHONY : src/solution/Solution.cpp.s
 
 # Help Target
 help:
@@ -320,27 +320,27 @@ help:
 	@echo ... GeneticCompetitiveSalesMan
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Rand.obj
-	@echo ... Rand.i
-	@echo ... Rand.s
-	@echo ... genetic/Chromosome.obj
-	@echo ... genetic/Chromosome.i
-	@echo ... genetic/Chromosome.s
-	@echo ... genetic/Population.obj
-	@echo ... genetic/Population.i
-	@echo ... genetic/Population.s
-	@echo ... graphs/Graph.obj
-	@echo ... graphs/Graph.i
-	@echo ... graphs/Graph.s
-	@echo ... graphs/Path.obj
-	@echo ... graphs/Path.i
-	@echo ... graphs/Path.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... solution/Solution.obj
-	@echo ... solution/Solution.i
-	@echo ... solution/Solution.s
+	@echo ... src/Rand.obj
+	@echo ... src/Rand.i
+	@echo ... src/Rand.s
+	@echo ... src/genetic/Chromosome.obj
+	@echo ... src/genetic/Chromosome.i
+	@echo ... src/genetic/Chromosome.s
+	@echo ... src/genetic/Population.obj
+	@echo ... src/genetic/Population.i
+	@echo ... src/genetic/Population.s
+	@echo ... src/graphs/Graph.obj
+	@echo ... src/graphs/Graph.i
+	@echo ... src/graphs/Graph.s
+	@echo ... src/graphs/Path.obj
+	@echo ... src/graphs/Path.i
+	@echo ... src/graphs/Path.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/solution/Solution.obj
+	@echo ... src/solution/Solution.i
+	@echo ... src/solution/Solution.s
 .PHONY : help
 
 
