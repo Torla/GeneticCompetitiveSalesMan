@@ -26,7 +26,7 @@ public:
 		std::shuffle(this->begin(),this->end(), Random::rng);
 	}
 
-	int evaluateCost(){
+	unsigned int evaluateCost(){
 		return graph->pathCostCycle(this);
 	}
 

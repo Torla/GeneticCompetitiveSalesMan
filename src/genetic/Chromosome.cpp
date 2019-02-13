@@ -4,7 +4,7 @@
 
 #include "Chromosome.h"
 
-const float Chromosome::mutationRate = 1;
+const float Chromosome::mutationRate = 0.5;
 
 Solution Chromosome::order1CrossOver(Solution &sol1, Solution &sol2) {
 

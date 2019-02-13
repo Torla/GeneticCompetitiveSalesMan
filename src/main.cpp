@@ -10,15 +10,19 @@ using namespace std;
 
 int main() {
 
-	Random::init(time(nullptr));
+	Random::init(0);
 
 	Graph graph(20,0,100);
 
 	Population population(&graph,1000);
+	population.nextGeneration();
 
+
+while(true) {
 	Solution sol = population.best();
-
-	cout << sol << sol.evaluateCost();
+	cout << population.size() << sol << sol.evaluateCost() << endl;
+	population.nextGeneration();
+	 }
 
 
 	return 0;

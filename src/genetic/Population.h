@@ -7,14 +7,21 @@
 
 
 #include <vector>
+#include <set>
 #include "Chromosome.h"
+
+
 
 class Population {
 private:
+
+	const static float steadyRatio;
+
 	std::vector<Chromosome*> pop;
 	Graph *graph;
 
 	static bool solComp(Chromosome* a,Chromosome* b);
+
 
 public:
 	explicit Population(Graph *graph,unsigned int size):pop(size),graph(graph){
@@ -22,6 +29,7 @@ public:
 			pop[i] = new Chromosome(graph);
 		}
 
+		std::sort(pop.begin(),pop.end(),Population::solComp);
 
 	}
 
@@ -29,6 +37,10 @@ public:
 		for (auto i : pop) {
 			free(i);
 		}
+	}
+
+	unsigned int size(){
+		return pop.size();
 	}
 
 	Chromosome best(){
@@ -39,6 +51,9 @@ public:
 
 	}
 
+	void nextGeneration();
+
+
 	friend std::ostream& operator<<(std::ostream & stream,Population & obj){
 		for(auto i : obj.pop){
 			stream << *i << i->evaluateCost() << std::endl;
@@ -46,6 +61,7 @@ public:
 		return stream;
 	}
 
+	void rouletteWheel(std::vector<Chromosome *> & parentCouples);
 };
 
 
