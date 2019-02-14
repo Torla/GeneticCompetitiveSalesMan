@@ -18,16 +18,21 @@ private:
 	const static float steadyRatio;
 
 	std::vector<Chromosome*> pop;
+	Graph *graphWithTraffic;
 	Graph *graph;
 
 	static bool solComp(Chromosome* a,Chromosome* b);
 	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
+	void computeTrafficOnGraph();
 
 
 public:
 	explicit Population(Graph *graph,unsigned int size):pop(size),graph(graph){
+
+		graphWithTraffic = new Graph(*graph);
+
 		for(int i=0;i<size;i++){
-			pop[i] = new Chromosome(graph);
+			pop[i] = new Chromosome(graphWithTraffic);
 		}
 
 		std::sort(pop.begin(),pop.end(),Population::solComp);

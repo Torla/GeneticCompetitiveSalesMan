@@ -16,9 +16,7 @@ void Population::nextGeneration() {
 	std::vector<Chromosome *> parentsCouples;
 
 
-	rouletteWheel(parentsCouples,pop.size() - pop.size()*steadyRatio);
-
-
+	rouletteWheel(parentsCouples, static_cast<unsigned int>(pop.size() - pop.size() * steadyRatio));
 
 
 	for(register unsigned int i=1;i<parentsCouples.size();i+=2){ // todo opt steady ratio
@@ -35,8 +33,10 @@ void Population::nextGeneration() {
 		else free(pop[i]);
 	}
 
-
 	pop.swap(children);
+
+	computeTrafficOnGraph();
+
 }
 
 void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber) {
@@ -59,7 +59,6 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 	}
 
 	if(probS[pop.size()-1]<precision) probS[pop.size()-1]=precision;
-	//std::cout << probS[pop.size()-1];
 
 	//binary search
 
@@ -86,5 +85,18 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 	}
 
 
+}
+
+void Population::computeTrafficOnGraph() {
+	for (register unsigned int i = 0; i < graph->size();i++) {
+		for (register unsigned int j = 0; j < graph->size();j++) {
+			(*graphWithTraffic)(i,j)=(*graph)(i,j);
+		}
+	}
+	for(auto p:pop){
+		for(register unsigned int i=0;i<p->size();i++){
+			(*graphWithTraffic)((*p)[i],(*p)[(i+1)%p->size()])+=1;
+		}
+	}
 }
 

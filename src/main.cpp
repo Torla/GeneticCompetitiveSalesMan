@@ -12,7 +12,7 @@ int main() {
 
 	Random::init(0);
 
-	Graph graph(15,0,100);
+	Graph graph(10,0,1000);
 
 	Solution solution(&graph);
 
