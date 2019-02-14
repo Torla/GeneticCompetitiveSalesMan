@@ -12,9 +12,17 @@ int main() {
 
 	Random::init(0);
 
-	Graph graph(20,0,100);
+	Graph graph(15,0,100);
 
-	Population population(&graph,1000);
+	Solution solution(&graph);
+
+	for(unsigned int i=0;i<solution.size();i++) solution[i]=i;
+
+	graph.placeOptimal(&solution);
+
+	std::cout << solution.evaluateCost() << solution;
+
+	Population population(&graph,101);
 	population.nextGeneration();
 
 

@@ -21,6 +21,7 @@ private:
 	Graph *graph;
 
 	static bool solComp(Chromosome* a,Chromosome* b);
+	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
 
 
 public:
@@ -61,7 +62,6 @@ public:
 		return stream;
 	}
 
-	void rouletteWheel(std::vector<Chromosome *> & parentCouples);
 };
 
 

@@ -16,3 +16,12 @@ int Graph::pathCost(const Path * path) {
 int Graph::pathCostCycle(const Path *path) {
 	return this->pathCost(path) + (*this)(path->at(path->size()-1),path->at(0));
 }
+
+void Graph::placeOptimal(const Path *path) {
+
+	for(register unsigned int i=0;i<path->size();i++){
+		(*this)(path->at(i),path->at((i+1)%path->size()))=0;
+	}
+
+
+}
