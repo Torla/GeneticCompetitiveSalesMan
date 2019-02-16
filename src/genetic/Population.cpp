@@ -5,7 +5,7 @@
 #include "Population.h"
 
 
-const float  Population::steadyRatio = 0.1;
+const float  Population::steadyRatio = 0.9;
 
 bool Population::solComp(Chromosome *a, Chromosome *b) {
 	return (a->evaluateCost()<b->evaluateCost());

@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <set>
+#include <fstream>
 #include "Chromosome.h"
 
 
@@ -57,14 +58,43 @@ public:
 
 	}
 
+	float meanCost(){
+		int sum=0;
+		for(auto p:pop){
+			sum+=p->evaluateCost();
+		}
+		return (float)sum/pop.size();
+	}
+
+	float stdDevCost(){
+		float mean = meanCost();
+		float ret=0;
+		for(auto p:pop){
+			ret += pow(p->evaluateCost() - mean,2);
+		}
+		ret/=pop.size();
+		return sqrtf(ret);
+	}
+
+
+
 	void nextGeneration();
 
 
 	friend std::ostream& operator<<(std::ostream & stream,Population & obj){
+
+		std::sort(obj.pop.begin(),obj.pop.end(),Population::solComp);
 		for(auto i : obj.pop){
 			stream << *i << i->evaluateCost() << std::endl;
 		}
 		return stream;
+	}
+
+	void save(const char* path){
+		std::ofstream myfile;
+		myfile.open (path);
+		myfile << *this;
+		myfile.close();
 	}
 
 };
