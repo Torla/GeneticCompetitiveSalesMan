@@ -4,8 +4,7 @@
 
 #include "Population.h"
 
-
-const float  Population::steadyRatio = 0.9;
+float  Population::steadyRatio;
 
 bool Population::solComp(Chromosome *a, Chromosome *b) {
 	return (a->evaluateCost()<b->evaluateCost());
@@ -19,7 +18,7 @@ void Population::nextGeneration() {
 	rouletteWheel(parentsCouples, static_cast<unsigned int>(pop.size() - pop.size() * steadyRatio));
 
 
-	for(register unsigned int i=1;i<parentsCouples.size();i+=2){ // todo opt steady ratio
+	for(register unsigned int i=1;i<parentsCouples.size();i+=2){
 		children.push_back(new Chromosome(*parentsCouples[i],*parentsCouples[i-1]));
 		children.push_back(new Chromosome(*parentsCouples[i-1],*parentsCouples[i]));
 	}
@@ -60,15 +59,18 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 
 	if(probS[pop.size()-1]<precision) probS[pop.size()-1]=precision;
 
-	//binary search
 
+	unsigned int r;
 	std::uniform_int_distribution<std::mt19937::result_type> distInt(0,precision-1);
-
-	int r;
 	for(int i=0;i<couplesNumber;i++) {
 		r=distInt(Random::rng);
-		int s=0,d=pop.size(),x=s+(d-s)/2;
-		while(!(probS[x]<=r && probS[x+1]>r)){
+		parentCouples.push_back(pop[binarySearch(probS,r)]);
+	}
+}
+
+int Population::binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const {
+	int s=0,d= pop.size(),x= s + (d - s) / 2;
+	while(!(probS[x]<=r && probS[x+1]>r)){
 			if(probS[x+1]==r) {
 				x++;
 				break;
@@ -81,11 +83,9 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 			}
 			x=s+(d-s)/2;
 		}
-		parentCouples.push_back(pop[x]);
-	}
-
-
+	return x;
 }
+
 
 void Population::computeTrafficOnGraph() {
 	for (register unsigned int i = 0; i < graph->size();i++) {

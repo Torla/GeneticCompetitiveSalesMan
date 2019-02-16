@@ -10,8 +10,8 @@ Graph* graph;
 Population* population;
 int turn;
 
-void  Simulation::init(int nodeNums, int popSize) {
-	graph = new Graph(nodeNums);
+void  Simulation::init(int nodeNums,int minCost,int maxCost,int popSize) {
+	graph = new Graph(nodeNums,minCost,maxCost);
 	population = new Population(graph,popSize);
 }
 
@@ -20,7 +20,7 @@ void  Simulation::init(int nodeNums, int popSize) {
 void Simulation::start() {
 	for(turn=0;;turn++){
 		Solution sol = population->best();
-		std::cout << "  " << sol.evaluateCost() << "  " << population->meanCost()  << " " << population->stdDevCost() << std::endl;
+		std::cout << turn << " " << "  " << sol.evaluateCost() << "  " << population->meanCost()  << " " << population->stdDevCost() << std::endl;
 		population->nextGeneration();
 		population->save("pop.txt");
 	}

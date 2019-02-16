@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "genetic/Chromosome.h"
-#include "genetic/Population.h"
 #include "Simulation.h"
 
 
@@ -13,7 +12,10 @@ int main() {
 
 	Random::init(0);
 
-	Simulation::init(20,1000);
+	Chromosome::setMutationRate(0.2);
+	Population::setSteadyRatio(0.9);
+
+	Simulation::init(20,0,100,100);
 
 	Simulation::start();
 

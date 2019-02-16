@@ -15,8 +15,7 @@
 
 class Population {
 private:
-
-	const static float steadyRatio;
+	static float steadyRatio;
 
 	std::vector<Chromosome*> pop;
 	Graph *graphWithTraffic;
@@ -44,6 +43,10 @@ public:
 		for (auto i : pop) {
 			free(i);
 		}
+	}
+
+	static void setSteadyRatio(float steadyRatio) {
+		Population::steadyRatio = steadyRatio;
 	}
 
 	unsigned int size(){
@@ -97,6 +100,7 @@ public:
 		myfile.close();
 	}
 
+	int binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const;
 };
 
 

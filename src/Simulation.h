@@ -11,7 +11,7 @@
 
 namespace Simulation {
 
-	void init(int nodeNums,int popSize);
+	void  init(int nodeNums,int minCost,int maxCost,int popSize);
 	void start();
 
 };

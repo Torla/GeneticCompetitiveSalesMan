@@ -11,12 +11,16 @@
 
 class Chromosome: public Solution {
 private:
-	const static float mutationRate;
+	static float mutationRate;
 	static Solution order1CrossOver(Solution &sol1, Solution &sol2);
 	static Solution mutation(Solution so1);
 public:
 	Chromosome(Graph *graph):Solution(graph){}
 	Chromosome(Chromosome& c1,Chromosome& c2):Solution(mutation(order1CrossOver(c1,c2))){
+	}
+
+	static void setMutationRate(float mutationRate) {
+		Chromosome::mutationRate = mutationRate;
 	}
 
 };
