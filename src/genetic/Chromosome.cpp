@@ -8,13 +8,14 @@ float Chromosome::mutationRate;
 
 Solution Chromosome::order1CrossOver(Solution &sol1, Solution &sol2) {
 
+
 	unsigned int crossL,crossR;
 	Solution ret(sol1);
 	std::uniform_int_distribution<std::mt19937::result_type> dist(0,sol1.len());
 	crossL= dist(Random::rng);
 	std::uniform_int_distribution<std::mt19937::result_type> dist1(crossL,sol1.len());
 	crossR = dist1(Random::rng);
-	int k=0;
+	unsigned int k=0;
 	std::vector<int> v;
 	for(unsigned int i=crossL;i<crossR;i++){
 		v.push_back(sol1.get(i));

@@ -31,6 +31,16 @@ public:
 		return this->Path::size();
 	}
 
+	unsigned int distance(Solution & sol){
+		std:vector<unsigned int> a=this->getLinkRepresentation(),b=sol.getLinkRepresentation();
+		unsigned int ret=0;
+		for(register unsigned int i=0;i<this->size();i++){
+			if(a[i]!=b[i]) ret++;
+		}
+		return ret;
+
+	}
+
 	friend std::ostream& operator<< (std::ostream& stream, Solution& sol) {
 
 		stream << "[";

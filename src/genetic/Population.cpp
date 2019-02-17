@@ -49,6 +49,7 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 		sum+=prob[i];
 	}
 	if(sum==0) sum=1; // todo del this
+
 	for(unsigned int i=0;i<pop.size();i++){
 		prob[i]=(prob[i]*precision)/sum+i%2;
 	}
@@ -62,7 +63,9 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 
 	unsigned int r;
 	std::uniform_int_distribution<std::mt19937::result_type> distInt(0,precision-1);
-	for(int i=0;i<couplesNumber;i++) {
+	for(int i=0;i<couplesNumber;i+=2) {
+		r=distInt(Random::rng);
+		parentCouples.push_back(pop[binarySearch(probS,r)]);
 		r=distInt(Random::rng);
 		parentCouples.push_back(pop[binarySearch(probS,r)]);
 	}
@@ -85,7 +88,6 @@ int Population::binarySearch(const std::vector<unsigned int> &probS, unsigned in
 		}
 	return x;
 }
-
 
 void Population::computeTrafficOnGraph() {
 	for (register unsigned int i = 0; i < graph->size();i++) {
