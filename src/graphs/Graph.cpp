@@ -8,20 +8,22 @@
 int Graph::pathCost(const Path * path) {
 	int ret=0;
 	for(register unsigned int i=0;i<path->size()-1;i++){
-		ret += (*this)((unsigned int) path->at(i), path->at(i+1));
+		ret += (*this)(path->get(i), path->get(i+1));
 	}
 	return ret;
 }
 
 int Graph::pathCostCycle(const Path *path) {
-	return this->pathCost(path) + (*this)(path->at(path->size()-1),path->at(0));
+	return this->pathCost(path) + (*this)(path->get(path->size()-1),path->get(0));
 }
 
 void Graph::placeOptimal(const Path *path) {
 
 	for(register unsigned int i=0;i<path->size();i++){
-		(*this)(path->at(i),path->at((i+1)%path->size()))=0;
+		(*this)(path->get(i),path->get((i+1)%path->size()))=0;
 	}
+
+
 
 
 }

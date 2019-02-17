@@ -27,11 +27,6 @@ public:
 		return graph->pathCost(this);
 	}
 
-
-	unsigned int& operator[](unsigned int i){
-		return this->at(i);
-	}
-
 	unsigned int len()const {
 		return this->Path::size();
 	}
