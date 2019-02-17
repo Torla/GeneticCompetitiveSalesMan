@@ -10,7 +10,7 @@
 
 namespace Random {
 	extern std::mt19937 rng;
-	void init(int);
+	void init(unsigned int);
 };
 
 

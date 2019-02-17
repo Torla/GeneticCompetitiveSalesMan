@@ -6,6 +6,6 @@
 
 std::mt19937 Random::rng;
 
-void Random::init(int seed){
+void Random::init(unsigned int seed){
 	Random::rng.seed(seed);
 };

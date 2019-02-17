@@ -15,7 +15,7 @@ private:
 	static Solution order1CrossOver(const Solution &sol1,const Solution &sol2);
 	static Solution mutation(Solution so1);
 public:
-	Chromosome(const Graph *graph):Solution(graph){}
+	explicit Chromosome(const Graph *graph):Solution(graph){}
 	Chromosome(const Chromosome& c1,const Chromosome& c2):Solution(mutation(order1CrossOver(c1,c2))){
 	}
 

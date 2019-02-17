@@ -1,5 +1,4 @@
 #include <iostream>
-#include <getopt.h>
 
 #include "genetic/Chromosome.h"
 #include "Simulation.h"

@@ -62,7 +62,7 @@ public:
 		return vector::end();
 	}
 
-void push_back(const value_type &__x) {
+	void push_back(const value_type &__x) {
 		vector::push_back(__x);
 	}
 

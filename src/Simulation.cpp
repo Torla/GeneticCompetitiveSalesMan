@@ -10,7 +10,7 @@ Graph* graph;
 Population* population;
 int turn;
 
-void  Simulation::init(int nodeNums,int minCost,int maxCost,int popSize) {
+void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int maxCost,unsigned int popSize) {
 	graph = new Graph(nodeNums,minCost,maxCost);
 	population = new Population(graph,popSize);
 

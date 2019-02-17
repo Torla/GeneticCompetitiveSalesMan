@@ -45,8 +45,8 @@ public:
 
 		stream << "[";
 		std::vector<unsigned int> a = sol.getLinkRepresentation();
-		for(std::vector<unsigned int>::iterator it =a.begin(); it != a.end(); ++it){
-			stream << *it;
+		for (unsigned int &it : a) {
+			stream << it;
 			stream << " ";
 		}
 		stream << "]";
