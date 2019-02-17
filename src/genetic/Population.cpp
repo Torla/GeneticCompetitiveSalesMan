@@ -4,8 +4,9 @@
 
 #include "Population.h"
 
-float  Population::steadyRatio;
-float  Population::nearRatio;
+float  Population::steadyRatio=0;
+float  Population::nearRatio=0;
+bool  Population::traffic=false;
 
 bool Population::solComp(Chromosome *a, Chromosome *b) {
 	return (a->evaluateCost()<b->evaluateCost());
@@ -35,7 +36,7 @@ void Population::nextGeneration() {
 
 	pop.swap(children);
 
-	computeTrafficOnGraph();
+	if(traffic) computeTrafficOnGraph();
 
 }
 
@@ -72,7 +73,11 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 	for(int i=0;i<couplesNumber;i+=2) {
 		r=distInt(Random::rng);
 		parentCouples.push_back(pop[binarySearch(probS,r)]);
-
+		if(nearRatio==0){
+			r=distInt(Random::rng);
+			parentCouples.push_back(pop[binarySearch(probS,r)]);
+			continue;
+		}
 		int sumD=0;
 		for(unsigned int x=0;x<pop.size();x++){
 			unsigned int d=parentCouples[i]->distance(*pop.at(x));

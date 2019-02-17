@@ -12,11 +12,13 @@ int main() {
 
 	Random::init(0);
 
-	Chromosome::setMutationRate(0.2);
-	Population::setSteadyRatio(0.9);
+	Chromosome::setMutationRate(0.5);
+	Population::setSteadyRatio(0.1);
 	Population::setNearRatio(0.5);
+	Population::setTraffic(false);
 
-	Simulation::init(50,0,100,100);
+
+	Simulation::init(20,0,100,100);
 
 	Simulation::start();
 

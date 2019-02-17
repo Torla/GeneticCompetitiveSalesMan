@@ -21,6 +21,7 @@ private:
 	std::vector<Chromosome*> pop;
 	Graph *graphWithTraffic;
 	Graph *graph;
+	static bool traffic;
 
 	static bool solComp(Chromosome* a,Chromosome* b);
 	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
@@ -50,9 +51,11 @@ public:
 	static void setSteadyRatio(float steadyRatio) {
 		Population::steadyRatio = steadyRatio;
 	}
-
 	static void setNearRatio(float nearRatio) {
 		Population::nearRatio = nearRatio;
+	}
+	static void setTraffic(bool traffic) {
+		Population::traffic = traffic;
 	}
 
 	unsigned int size(){
