@@ -6,6 +6,8 @@
 
 float  Population::steadyRatio=0;
 float  Population::nearRatio=0;
+float  Population::bottleNeck=0;
+float  Population::bottleNeckGravity=0.1;
 bool  Population::traffic=false;
 
 bool Population::solComp(Chromosome *a, Chromosome *b) {
@@ -15,6 +17,14 @@ bool Population::solComp(Chromosome *a, Chromosome *b) {
 void Population::nextGeneration() {
 	std::vector<Chromosome *> children;
 	std::vector<Chromosome *> parentsCouples;
+
+	std::uniform_real_distribution<> distFloat(0,1);
+
+	float tempSR=steadyRatio;
+	if(distFloat(Random::rng)-bottleNeck<0){
+		steadyRatio*=bottleNeckGravity;
+		std::cout << "bottle" << std::endl;
+	}
 
 
 	rouletteWheel(parentsCouples, static_cast<unsigned int>(pop.size() - pop.size() * steadyRatio));
@@ -34,6 +44,8 @@ void Population::nextGeneration() {
 		else free(pop[i]);
 	}
 
+	steadyRatio=tempSR;
+
 	pop.swap(children);
 
 	if(traffic) computeTrafficOnGraph();
@@ -46,6 +58,7 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 
 	
 	std::vector<unsigned int> prob(pop.size()),probS(pop.size()),probD(pop.size()),probDS(pop.size());
+
 	int sum=0,max=0;
 	for(int i=0;i<pop.size();i++){
 		prob[i]=pop[i]->evaluateCost();

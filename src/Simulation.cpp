@@ -13,6 +13,8 @@ int turn;
 void  Simulation::init(int nodeNums,int minCost,int maxCost,int popSize) {
 	graph = new Graph(nodeNums,minCost,maxCost);
 	population = new Population(graph,popSize);
+
+
 }
 
 #pragma clang diagnostic push

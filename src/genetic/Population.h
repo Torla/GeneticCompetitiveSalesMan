@@ -17,11 +17,13 @@ class Population {
 private:
 	static float steadyRatio;
 	static float nearRatio;
+	static float bottleNeck;
+	static float bottleNeckGravity;
+	static bool traffic;
 
 	std::vector<Chromosome*> pop;
 	Graph *graphWithTraffic;
 	Graph *graph;
-	static bool traffic;
 
 	static bool solComp(Chromosome* a,Chromosome* b);
 	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
@@ -56,6 +58,9 @@ public:
 	}
 	static void setTraffic(bool traffic) {
 		Population::traffic = traffic;
+	}
+	static void setBottleNeck(float bottleNeck) {
+		Population::bottleNeck = bottleNeck;
 	}
 
 	unsigned int size(){
@@ -108,6 +113,7 @@ public:
 		myfile << *this;
 		myfile.close();
 	}
+
 
 
 };
