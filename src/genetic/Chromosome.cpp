@@ -6,7 +6,7 @@
 
 float Chromosome::mutationRate;
 
-Solution Chromosome::order1CrossOver(Solution &sol1, Solution &sol2) {
+Solution Chromosome::order1CrossOver(const Solution &sol1, const Solution &sol2) {
 
 	unsigned int crossL,crossR;
 	Solution ret(sol1);

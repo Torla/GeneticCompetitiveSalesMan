@@ -23,7 +23,7 @@ private:
 
 	std::vector<Chromosome*> pop;
 	Graph *graphWithTraffic;
-	Graph *graph;
+	const Graph *graph;
 
 	static bool solComp(Chromosome* a,Chromosome* b);
 	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
@@ -32,7 +32,7 @@ private:
 
 
 public:
-	explicit Population(Graph *graph,unsigned int size):pop(size),graph(graph){
+	explicit Population(const Graph *graph,unsigned int size):pop(size),graph(graph){
 
 		graphWithTraffic = new Graph(*graph);
 
@@ -63,11 +63,11 @@ public:
 		Population::bottleNeck = bottleNeck;
 	}
 
-	unsigned int size(){
+	unsigned int size()const{
 		return pop.size();
 	}
 
-	Chromosome best(){
+	Chromosome best(){ //todo const check this and don't sort
 
 		std::sort(pop.begin(),pop.end(),Population::solComp);
 
@@ -75,7 +75,7 @@ public:
 
 	}
 
-	float meanCost(){
+	float meanCost()const{
 		int sum=0;
 		for(auto p:pop){
 			sum+=p->evaluateCost();
@@ -83,7 +83,7 @@ public:
 		return (float)sum/pop.size();
 	}
 
-	float stdDevCost(){
+	float stdDevCost()const{
 		float mean = meanCost();
 		float ret=0;
 		for(auto p:pop){
@@ -98,16 +98,17 @@ public:
 	void nextGeneration();
 
 
-	friend std::ostream& operator<<(std::ostream & stream,Population & obj){
+	friend std::ostream& operator<<(std::ostream & stream,const Population & p){
 
-		std::sort(obj.pop.begin(),obj.pop.end(),Population::solComp);
-		for(auto i : obj.pop){
+		std::vector<Chromosome *> obj(p.pop);
+		std::sort(obj.begin(),obj.end(),Population::solComp);
+		for(auto i : obj){
 			stream << *i << i->evaluateCost()  << std::endl;
 		}
 		return stream;
 	}
 
-	void save(const char* path){
+	void save(const char* path)const{
 		std::ofstream myfile;
 		myfile.open (path);
 		myfile << *this;

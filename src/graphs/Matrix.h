@@ -23,8 +23,11 @@ public:
 	T& operator()(unsigned int x, unsigned int y){
 		return mat.at(x*dim+y);
 	}
+	const T& operator()(unsigned int x, unsigned int y) const {
+		return mat.at(x*dim+y);
+	}
 
-	unsigned int size(){ return dim;}
+	unsigned int size() const { return dim;}
 
 };
 

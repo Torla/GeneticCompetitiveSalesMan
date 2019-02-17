@@ -15,23 +15,23 @@
 
 class Solution : public Path{
 private:
-	Graph* graph;
+	const Graph* graph;
 public:
-	explicit Solution(Graph* graph) : Path(graph->size()),graph(graph) {
+	explicit Solution(const Graph* graph) : Path(graph->size()),graph(graph) {
 		this->clear();
 		for(register unsigned int i=0;i<graph->size();i++) this->push_back(i);
 		std::shuffle(this->begin(),this->end(), Random::rng);
 	}
 
-	unsigned int evaluateCost(){
-		return graph->pathCost(this);
+	unsigned int evaluateCost()const{
+		return graph->pathCostCycle(this);
 	}
 
 	unsigned int len()const {
 		return this->Path::size();
 	}
 
-	unsigned int distance(Solution & sol){
+	unsigned int distance(const Solution & sol)const{
 		std:vector<unsigned int> a=this->getLinkRepresentation(),b=sol.getLinkRepresentation();
 		unsigned int ret=0;
 		for(register unsigned int i=0;i<this->size();i++){
@@ -41,7 +41,7 @@ public:
 
 	}
 
-	friend std::ostream& operator<< (std::ostream& stream, Solution& sol) {
+	friend std::ostream& operator<< (std::ostream& stream,const Solution& sol) {
 
 		stream << "[";
 		std::vector<unsigned int> a = sol.getLinkRepresentation();

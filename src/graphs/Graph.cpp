@@ -5,7 +5,7 @@
 #include "Graph.h"
 #include "Path.h"
 
-int Graph::pathCost(const Path * path) {
+int Graph::pathCost(const Path * path) const {
 	int ret=0;
 	for(register unsigned int i=0;i<path->size()-1;i++){
 		ret += (*this)(path->get(i), path->get(i+1));
@@ -13,7 +13,7 @@ int Graph::pathCost(const Path * path) {
 	return ret;
 }
 
-int Graph::pathCostCycle(const Path *path) {
+int Graph::pathCostCycle(const Path *path) const {
 	return this->pathCost(path) + (*this)(path->get(path->size()-1),path->get(0));
 }
 

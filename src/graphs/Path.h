@@ -12,8 +12,8 @@
 
 class Path: private std::vector<unsigned int>{
 
-	std::vector<unsigned int> linkRep;
-	bool linkRepValid;
+	mutable std::vector<unsigned int> linkRep;
+	mutable bool linkRepValid;
 
 public:
 	explicit Path(unsigned int length):std::vector<unsigned int>(),linkRepValid(false),linkRep(length){
@@ -21,7 +21,7 @@ public:
 	};
 
 
-	std::vector<unsigned int> getLinkRepresentation(){
+	std::vector<unsigned int> getLinkRepresentation() const{
 		if(linkRepValid){
 			return linkRep;
 		}

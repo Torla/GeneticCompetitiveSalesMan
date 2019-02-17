@@ -31,9 +31,9 @@ public:
 
 	void placeOptimal(const Path* path);
 
-	int pathCost(const Path* path);
+	int pathCost(const Path* path) const;
 
-	int pathCostCycle(const Path *path);
+	int pathCostCycle(const Path *path) const;
 };
 
 
