@@ -20,6 +20,13 @@ public:
 		return this->at(i);
 	}
 
+	std::vector<unsigned int> getLinkRepresentation(){
+		std::vector<unsigned int> ret(this->size());
+		for(register unsigned int i=0;i<this->size();i++){
+			ret[this->at(i)]=this->at((i+1)%this->size());
+		}
+		return ret;
+	}
 
 };
 

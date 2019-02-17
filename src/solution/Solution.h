@@ -18,16 +18,13 @@ private:
 	Graph* graph;
 public:
 	explicit Solution(Graph* graph) : Path(graph->size()),graph(graph) {
-		std::mt19937 rng;
-		rng.seed(static_cast<unsigned int>(time(nullptr)));
-
 		this->clear();
 		for(register unsigned int i=0;i<graph->size();i++) this->push_back(i);
 		std::shuffle(this->begin(),this->end(), Random::rng);
 	}
 
 	unsigned int evaluateCost(){
-		return graph->pathCostCycle(this);
+		return graph->pathCost(this);
 	}
 
 
@@ -42,7 +39,8 @@ public:
 	friend std::ostream& operator<< (std::ostream& stream, Solution& sol) {
 
 		stream << "[";
-		for(std::vector<unsigned int>::iterator it = sol.begin(); it != sol.end(); ++it){
+		std::vector<unsigned int> a = sol.getLinkRepresentation();
+		for(std::vector<unsigned int>::iterator it =a.begin(); it != a.end(); ++it){
 			stream << *it;
 			stream << " ";
 		}

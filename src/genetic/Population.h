@@ -88,7 +88,7 @@ public:
 
 		std::sort(obj.pop.begin(),obj.pop.end(),Population::solComp);
 		for(auto i : obj.pop){
-			stream << *i << i->evaluateCost() << std::endl;
+			stream << *i << i->evaluateCost()  << std::endl;
 		}
 		return stream;
 	}
