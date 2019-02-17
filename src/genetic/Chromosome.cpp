@@ -16,14 +16,14 @@ Solution Chromosome::order1CrossOver(Solution &sol1, Solution &sol2) {
 	crossR = dist1(Random::rng);
 	int k=0;
 	std::vector<int> v;
-	for(int i=crossL;i<crossR;i++){
-		v.push_back(sol1[i]);
+	for(unsigned int i=crossL;i<crossR;i++){
+		v.push_back(sol1.get(i));
 	}
 	for(int i=0;i<sol1.len();){
 		if(i==crossL) i=crossR;
 		if(i==sol1.len()) break;
-		if(std::find(v.begin(),v.end(),sol2[k])==v.end()) {
-			ret[i] = sol2[k];
+		if(std::find(v.begin(),v.end(),sol2.get(k))==v.end()) {
+			ret[i] = sol2.get(k);
 			i++;
 		}
 		k++;

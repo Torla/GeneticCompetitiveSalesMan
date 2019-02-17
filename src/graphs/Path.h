@@ -8,34 +8,43 @@
 
 #include <vector>
 #include <stdexcept>
+#include <iostream>
 
 class Path: private std::vector<unsigned int>{
 
+	std::vector<unsigned int> linkRep;
+	bool linkRepValid;
+
 public:
-	explicit Path(unsigned int length):std::vector<unsigned int>(){
+	explicit Path(unsigned int length):std::vector<unsigned int>(),linkRepValid(false),linkRep(length){
 		this->assign(length,0);
 	};
 
 
 	std::vector<unsigned int> getLinkRepresentation(){
-		std::vector<unsigned int> ret(this->size());
-		for(register unsigned int i=0;i<this->size();i++){
-			ret[this->at(i)]=this->at((i+1)%this->size());
+		if(linkRepValid){
+			return linkRep;
 		}
-		return ret;
+		for(register unsigned int i=0;i<this->size();i++){
+			linkRep[this->at(i)]=this->at((i+1)%this->size());
+		}
+		linkRepValid = true;
+		return linkRep;
 	}
 
 	unsigned int get(unsigned int i) const {
 		return this->at(i);
 	}
 
-unsigned int &operator[](size_type __n) {
+	unsigned int &operator[](size_type __n) {
+		linkRepValid= false;
 		return vector::operator[](__n);
 	}
 
 public:
 
 	void clear(){
+		linkRepValid= false;
 		vector::clear();
 	}
 
@@ -44,10 +53,12 @@ public:
 	}
 
 	iterator begin() {
+		linkRepValid= false;
 		return vector::begin();
 	}
 
 	iterator end() {
+		linkRepValid= false;
 		return vector::end();
 	}
 

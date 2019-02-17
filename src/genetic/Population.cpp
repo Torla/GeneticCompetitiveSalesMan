@@ -95,7 +95,7 @@ void Population::computeTrafficOnGraph() {
 	}
 	for(auto p:pop){
 		for(register unsigned int i=0;i<p->size();i++){
-			(*graphWithTraffic)((*p)[i],(*p)[(i+1)%p->size()])+=1;
+			(*graphWithTraffic)(p->get(i),p->get((i+1)%p->size()))+=1;
 		}
 	}
 }
