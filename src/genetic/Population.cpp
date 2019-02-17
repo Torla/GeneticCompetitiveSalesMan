@@ -42,11 +42,16 @@ void Population::nextGeneration() {
 void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber) {
 	
 	const int precision = 100000;
+
 	
 	std::vector<unsigned int> prob(pop.size()),probS(pop.size()),probD(pop.size()),probDS(pop.size());
-	int sum=0;
+	int sum=0,max=0;
 	for(int i=0;i<pop.size();i++){
 		prob[i]=pop[i]->evaluateCost();
+		if(prob[i]>max) max = prob[i];
+	}
+	for(int i=0;i<pop.size();i++){
+		prob[i]=max-prob[i];
 		sum+=prob[i];
 	}
 	if(sum==0) sum=1; // todo del this
@@ -71,8 +76,8 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 		int sumD=0;
 		for(unsigned int x=0;x<pop.size();x++){
 			unsigned int d=parentCouples[i]->distance(*pop.at(x));
-			probD[x]=d;
-			sumD+=d;
+			probD[x]=graph->size()-d;
+			sumD+=probD[x];
 		}
 		if(sumD==0) sumD=1;
 		for(unsigned int x=0;x<pop.size();x++){
@@ -118,7 +123,7 @@ void Population::computeTrafficOnGraph() {
 	}
 	for(auto p:pop){
 		for(register unsigned int i=0;i<p->size();i++){
-			(*graphWithTraffic)(p->get(i),p->get((i+1)%p->size()))+=1;
+			(*graphWithTraffic)(p->get(i),p->get((i+1)%p->size()))+=1; //todo change this
 		}
 	}
 }
