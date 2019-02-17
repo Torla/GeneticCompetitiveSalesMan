@@ -16,6 +16,7 @@
 class Population {
 private:
 	static float steadyRatio;
+	static float nearRatio;
 
 	std::vector<Chromosome*> pop;
 	Graph *graphWithTraffic;
@@ -23,6 +24,7 @@ private:
 
 	static bool solComp(Chromosome* a,Chromosome* b);
 	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
+	int binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const;
 	void computeTrafficOnGraph();
 
 
@@ -47,6 +49,10 @@ public:
 
 	static void setSteadyRatio(float steadyRatio) {
 		Population::steadyRatio = steadyRatio;
+	}
+
+	static void setNearRatio(float nearRatio) {
+		Population::nearRatio = nearRatio;
 	}
 
 	unsigned int size(){
@@ -100,7 +106,7 @@ public:
 		myfile.close();
 	}
 
-	int binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const;
+
 };
 
 

@@ -8,7 +8,6 @@ float Chromosome::mutationRate;
 
 Solution Chromosome::order1CrossOver(Solution &sol1, Solution &sol2) {
 
-
 	unsigned int crossL,crossR;
 	Solution ret(sol1);
 	std::uniform_int_distribution<std::mt19937::result_type> dist(0,sol1.len());

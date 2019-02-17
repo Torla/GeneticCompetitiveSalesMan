@@ -5,6 +5,7 @@
 #include "Population.h"
 
 float  Population::steadyRatio;
+float  Population::nearRatio;
 
 bool Population::solComp(Chromosome *a, Chromosome *b) {
 	return (a->evaluateCost()<b->evaluateCost());
@@ -42,7 +43,7 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 	
 	const int precision = 100000;
 	
-	std::vector<unsigned int> prob(pop.size()),probS(pop.size());
+	std::vector<unsigned int> prob(pop.size()),probS(pop.size()),probD(pop.size()),probDS(pop.size());
 	int sum=0;
 	for(int i=0;i<pop.size();i++){
 		prob[i]=pop[i]->evaluateCost();
@@ -66,8 +67,28 @@ void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigne
 	for(int i=0;i<couplesNumber;i+=2) {
 		r=distInt(Random::rng);
 		parentCouples.push_back(pop[binarySearch(probS,r)]);
+
+		int sumD=0;
+		for(unsigned int x=0;x<pop.size();x++){
+			unsigned int d=parentCouples[i]->distance(*pop.at(x));
+			probD[x]=d;
+			sumD+=d;
+		}
+		if(sumD==0) sumD=1;
+		for(unsigned int x=0;x<pop.size();x++){
+			probD[x]= static_cast<unsigned int>(((probD[x] * precision * nearRatio ) / sumD) + prob[x] * (1 - nearRatio));
+		}
+		probDS[0]=0;
+		for(unsigned int x=1;x<pop.size();x++){
+			probDS[x]=probDS[x-1]+probD[x];
+
+		}
+
+		if(probDS[pop.size()-1]<precision) probDS[pop.size()-1]=precision;
+
 		r=distInt(Random::rng);
-		parentCouples.push_back(pop[binarySearch(probS,r)]);
+		parentCouples.push_back(pop[binarySearch(probDS,r)]);
+
 	}
 }
 
