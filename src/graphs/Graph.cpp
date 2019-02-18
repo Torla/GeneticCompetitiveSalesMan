@@ -22,7 +22,4 @@ void Graph::placeOptimal(const Path *path) {
 		(*this)(path->get(i),path->get((i+1)%path->size()))=0;
 	}
 
-
-
-
 }

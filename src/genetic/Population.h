@@ -25,7 +25,7 @@ private:
 	Graph *graphWithTraffic;
 	const Graph *graph;
 
-	static bool solComp(Chromosome* a,Chromosome* b);
+	static bool solComp(const Chromosome* a,const Chromosome* b);
 	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
 	int binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const;
 	void computeTrafficOnGraph();
@@ -67,11 +67,9 @@ public:
 		return pop.size();
 	}
 
-	Chromosome best(){ //todo const check this and don't sort
+	Chromosome best()const{
 
-		std::sort(pop.begin(),pop.end(),Population::solComp);
-
-		return *pop[0];
+		return **std::min_element(pop.begin(),pop.end(),Population::solComp);
 
 	}
 

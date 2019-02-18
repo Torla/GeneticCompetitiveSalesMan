@@ -10,7 +10,7 @@ float  Population::bottleNeck=0;
 float  Population::bottleNeckGravity=0.1;
 bool  Population::traffic=false;
 
-bool Population::solComp(Chromosome *a, Chromosome *b) {
+bool Population::solComp(const Chromosome *a, const Chromosome *b) {
 	return (a->evaluateCost()<b->evaluateCost());
 }
 
