@@ -2,9 +2,12 @@
 
 #include "genetic/Chromosome.h"
 #include "Simulation.h"
+#include <thread>
 
 
 using namespace std;
+
+
 
 
 
@@ -15,13 +18,13 @@ int main(int argc,char * argv[]) {
 	Random::init(0);
 
 	Chromosome::setMutationRate(0.5);
-	Population::setSteadyRatio(0.9);
-	Population::setNearRatio(0.5);
-	Population::setBottleNeck(0.1);
-	Population::setTraffic(true);
+	Population::setSteadyRatio(0.5);
+	Population::setNearRatio(0);
+	Population::setBottleNeck(0);
+	Population::setTraffic(false);
 
 
-	Simulation::init(20,0,1000,100);
+	Simulation::init(20,0,1000,10);
 
 	Simulation::start();
 

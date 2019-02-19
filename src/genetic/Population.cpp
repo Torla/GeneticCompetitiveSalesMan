@@ -10,13 +10,13 @@ float  Population::bottleNeck=0;
 float  Population::bottleNeckGravity=0.1;
 bool  Population::traffic=false;
 
-bool Population::solComp(const Chromosome *a, const Chromosome *b) {
+bool Population::solComp(const std::shared_ptr<Chromosome> a, const std::shared_ptr<Chromosome> b) {
 	return (a->evaluateCost()<b->evaluateCost());
 }
 
 void Population::nextGeneration() {
-	std::vector<Chromosome *> children;
-	std::vector<Chromosome *> parentsCouples;
+	std::vector<std::shared_ptr<Chromosome>> children;
+	std::vector<std::shared_ptr<Chromosome>> parentsCouples;
 
 	std::uniform_real_distribution<> distFloat(0,1);
 
@@ -31,8 +31,8 @@ void Population::nextGeneration() {
 
 
 	for(register unsigned int i=1;i<parentsCouples.size();i+=2){
-		children.push_back(new Chromosome(*parentsCouples[i],*parentsCouples[i-1]));
-		children.push_back(new Chromosome(*parentsCouples[i-1],*parentsCouples[i]));
+		children.push_back(std::make_shared<Chromosome>(*parentsCouples[i],*parentsCouples[i-1]));
+		children.push_back(std::make_shared<Chromosome>(*parentsCouples[i-1],*parentsCouples[i]));
 	}
 
 
@@ -41,18 +41,21 @@ void Population::nextGeneration() {
 		if(i<pop.size()*steadyRatio-(pop.size()%2)){
 			children.push_back(pop[i]);
 		}
-		else free(pop[i]);
+		else pop[i].reset();
 	}
 
 	steadyRatio=tempSR;
 
+
 	pop.swap(children);
+
+	children.clear();
 
 	if(traffic) computeTrafficOnGraph();
 
 }
 
-void Population::rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber) {
+void Population::rouletteWheel(std::vector<std::shared_ptr<Chromosome>> &parentCouples, unsigned int couplesNumber) {
 	
 	const int precision = 100000;
 

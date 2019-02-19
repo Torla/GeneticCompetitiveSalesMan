@@ -9,6 +9,7 @@
 #include <vector>
 #include <set>
 #include <fstream>
+#include <memory>
 #include "Chromosome.h"
 
 
@@ -21,12 +22,12 @@ private:
 	static float bottleNeckGravity;
 	static bool traffic;
 
-	std::vector<Chromosome*> pop;
+	std::vector<std::shared_ptr<Chromosome>> pop;
 	Graph *graphWithTraffic;
 	const Graph *graph;
 
-	static bool solComp(const Chromosome* a,const Chromosome* b);
-	void rouletteWheel(std::vector<Chromosome *> &parentCouples, unsigned int couplesNumber);
+	static bool solComp(const std::shared_ptr<Chromosome> a, const std::shared_ptr<Chromosome> b);
+	void rouletteWheel(std::vector<std::shared_ptr<Chromosome>> &parentCouples, unsigned int couplesNumber);
 	int binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const;
 	void computeTrafficOnGraph();
 
@@ -37,7 +38,7 @@ public:
 		graphWithTraffic = new Graph(*graph);
 
 		for(int i=0;i<size;i++){
-			pop[i] = new Chromosome(graphWithTraffic);
+			pop[i] = std::make_shared<Chromosome>(graphWithTraffic);
 		}
 
 		std::sort(pop.begin(),pop.end(),Population::solComp);
@@ -46,7 +47,7 @@ public:
 
 	virtual ~Population() {
 		for (auto i : pop) {
-			free(i);
+			i.reset();
 		}
 	}
 
@@ -98,7 +99,7 @@ public:
 
 	friend std::ostream& operator<<(std::ostream & stream,const Population & p){
 
-		std::vector<Chromosome *> obj(p.pop);
+		std::vector<std::shared_ptr<Chromosome>> obj(p.pop);
 		std::sort(obj.begin(),obj.end(),Population::solComp);
 		for(auto i : obj){
 			stream << *i << i->evaluateCost()  << std::endl;

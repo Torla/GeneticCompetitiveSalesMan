@@ -24,7 +24,7 @@ void Simulation::start() {
 		Solution sol = population->best();
 		std::cout << turn << " " << "  " << sol.evaluateCost() << "  " << population->meanCost()  << " " << population->stdDevCost() << std::endl;
 		population->nextGeneration();
-		population->save("pop.txt");
+		//population->save("pop.txt");
 	}
 
 }
