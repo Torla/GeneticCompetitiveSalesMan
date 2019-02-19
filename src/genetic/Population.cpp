@@ -31,8 +31,8 @@ void Population::nextGeneration() {
 
 
 	for(register unsigned int i=1;i<parentsCouples.size();i+=2){
-		children.push_back(std::make_shared<Chromosome>(*parentsCouples[i],*parentsCouples[i-1]));
-		children.push_back(std::make_shared<Chromosome>(*parentsCouples[i-1],*parentsCouples[i]));
+		children.emplace_back(new Chromosome(*parentsCouples[i],*parentsCouples[i-1]));
+		children.emplace_back(new Chromosome(*parentsCouples[i-1],*parentsCouples[i]));
 	}
 
 
@@ -41,8 +41,11 @@ void Population::nextGeneration() {
 		if(i<pop.size()*steadyRatio-(pop.size()%2)){
 			children.push_back(pop[i]);
 		}
-		else pop[i].reset();
+		else {
+			pop[i].reset();
+		}
 	}
+
 
 	steadyRatio=tempSR;
 

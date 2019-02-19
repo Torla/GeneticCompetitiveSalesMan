@@ -2,17 +2,18 @@
 // Created by munfo on 15/02/2019.
 //
 
+#include <memory>
 #include "Simulation.h"
 
 
 
-Graph* graph;
-Population* population;
+std::unique_ptr<Graph> graph;
+std::unique_ptr<Population> population;
 int turn;
 
 void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int maxCost,unsigned int popSize) {
-	graph = new Graph(nodeNums,minCost,maxCost);
-	population = new Population(graph,popSize);
+	graph.reset(new Graph(nodeNums,minCost,maxCost));
+	population.reset(new Population(graph.get(),popSize));
 
 
 }

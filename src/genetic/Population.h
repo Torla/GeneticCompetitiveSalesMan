@@ -38,7 +38,7 @@ public:
 		graphWithTraffic = new Graph(*graph);
 
 		for(int i=0;i<size;i++){
-			pop[i] = std::make_shared<Chromosome>(graphWithTraffic);
+			pop[i].reset(new Chromosome(graphWithTraffic));
 		}
 
 		std::sort(pop.begin(),pop.end(),Population::solComp);
