@@ -18,15 +18,17 @@ class Population {
 private:
 	static float steadyRatio;
 	static float nearRatio;
-	static float bottleNeck;
+	static float bottleNeckRatio;
 	static float bottleNeckGravity;
 	static bool traffic;
+	static float disasterRate;
+	static float disasterGravity;
 
 	std::vector<std::shared_ptr<Chromosome>> pop;
 	Graph *graphWithTraffic;
 	const Graph *graph;
 
-	static bool solComp(const std::shared_ptr<Chromosome> a, const std::shared_ptr<Chromosome> b);
+	static bool solComp(std::shared_ptr<Chromosome> a,std::shared_ptr<Chromosome> b);
 	void rouletteWheel(std::vector<std::shared_ptr<Chromosome>> &parentCouples, unsigned int couplesNumber);
 	int binarySearch(const std::vector<unsigned int> &probS, unsigned int r) const;
 	void computeTrafficOnGraph();
@@ -61,7 +63,12 @@ public:
 		Population::traffic = traffic;
 	}
 	static void setBottleNeck(float bottleNeck) {
-		Population::bottleNeck = bottleNeck;
+		Population::bottleNeckRatio = bottleNeck;
+	}
+	static void setDisasterRate(float disasterRate) { Population::disasterRate = disasterRate;
+	}
+	static void setDisasterGravity(float disasterGravity) {
+		Population::disasterGravity = disasterGravity;
 	}
 
 	unsigned int size()const{

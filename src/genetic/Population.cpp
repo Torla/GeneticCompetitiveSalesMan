@@ -6,9 +6,11 @@
 
 float  Population::steadyRatio=0;
 float  Population::nearRatio=0;
-float  Population::bottleNeck=0;
+float  Population::bottleNeckRatio=0;
 float  Population::bottleNeckGravity=0.1;
-bool  Population::traffic=false;
+float  Population::disasterRate=0;
+float  Population::disasterGravity=0.1;
+bool   Population::traffic=false;
 
 bool Population::solComp(const std::shared_ptr<Chromosome> a, const std::shared_ptr<Chromosome> b) {
 	return (a->evaluateCost()<b->evaluateCost());
@@ -20,14 +22,28 @@ void Population::nextGeneration() {
 
 	std::uniform_real_distribution<> distFloat(0,1);
 
-	float tempSR=steadyRatio;
-	if(distFloat(Random::rng)-bottleNeck<0){
-		steadyRatio*=bottleNeckGravity;
+
+	int childNum,survivorNum;
+	bool disaster= false;
+
+	if(distFloat(Random::rng)-bottleNeckRatio<0){
+		childNum= static_cast<int>(pop.size() - pop.size() * steadyRatio * bottleNeckGravity);
+		survivorNum= static_cast<int>(pop.size() * steadyRatio * bottleNeckGravity);
 		std::cout << "bottle" << std::endl;
+	}
+	else if(distFloat(Random::rng)-disasterRate<0){
+		disaster=true;
+		survivorNum= static_cast<int>(pop.size() * disasterGravity);
+		childNum= static_cast<int>(pop.size() - pop.size() * disasterGravity);
+		std::cout << "disaster" << std::endl;
+	}
+	else{
+		childNum= static_cast<int>(pop.size() - pop.size() * steadyRatio);
+		survivorNum= static_cast<int>(pop.size() * steadyRatio);
 	}
 
 
-	rouletteWheel(parentsCouples, static_cast<unsigned int>(pop.size() - pop.size() * steadyRatio));
+	rouletteWheel(parentsCouples, static_cast<unsigned int>(childNum));
 
 
 	for(register unsigned int i=1;i<parentsCouples.size();i+=2){
@@ -37,8 +53,13 @@ void Population::nextGeneration() {
 
 
 	if(steadyRatio!=0)std::sort(pop.begin(),pop.end(),Population::solComp);
+	else if(disaster){
+		children.push_back(*std::max_element(pop.begin(),pop.end(),Population::solComp)); //todo this could double it
+		std::shuffle(pop.begin(),pop.end(),Random::rng);
+	}
+
 	for(register unsigned int i=0;i<pop.size();i+=1){
-		if(i<pop.size()*steadyRatio-(pop.size()%2)){
+		if(i<survivorNum-(pop.size()%2)){
 			children.push_back(pop[i]);
 		}
 		else {
@@ -46,8 +67,6 @@ void Population::nextGeneration() {
 		}
 	}
 
-
-	steadyRatio=tempSR;
 
 
 	pop.swap(children);
