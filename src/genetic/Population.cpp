@@ -4,6 +4,7 @@
 
 #include "Population.h"
 
+
 float  Population::steadyRatio=0;
 float  Population::nearRatio=0;
 float  Population::bottleNeckRatio=0;
@@ -29,13 +30,11 @@ void Population::nextGeneration() {
 	if(distFloat(Random::rng)-bottleNeckRatio<0){
 		childNum= static_cast<int>(pop.size() - pop.size() * steadyRatio * bottleNeckGravity);
 		survivorNum= static_cast<int>(pop.size()-childNum);
-		std::cout << "bottle" << std::endl;
 	}
 	else if(distFloat(Random::rng)-disasterRate<0){
 		disaster=true;
 		childNum= static_cast<int>(pop.size() - pop.size() * disasterGravity);
 		survivorNum= static_cast<int>(pop.size() - childNum);
-		std::cout << "disaster" << std::endl;
 	}
 	else{
 		childNum= static_cast<int>(pop.size() - pop.size() * steadyRatio);
@@ -79,7 +78,7 @@ void Population::nextGeneration() {
 
 void Population::rouletteWheel(std::vector<std::shared_ptr<Chromosome>> &parentCouples, unsigned int couplesNumber) {
 	
-	const int precision = 100000;
+	const int precision = static_cast<const int>(pow(2, 10));
 
 	
 	std::vector<unsigned int> prob(pop.size()),probS(pop.size()),probD(pop.size()),probDS(pop.size());
