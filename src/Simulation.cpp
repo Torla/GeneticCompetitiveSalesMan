@@ -14,16 +14,16 @@ using namespace std;
 
 unique_ptr<Graph> graph;
 unique_ptr<Population> population;
-int turn;
-milliseconds startTime;
-milliseconds maxTime;
+unsigned int turn;
+microseconds startTime;
+microseconds maxTime;
 
 void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int maxCost,unsigned int popSize, unsigned int maxTime) {
 	graph.reset(new Graph(nodeNums,minCost,maxCost));
 	population.reset(new Population(graph.get(),popSize));
 
-	startTime = duration_cast<milliseconds>(system_clock::now().time_since_epoch());
-	milliseconds m(maxTime);
+	startTime = duration_cast<microseconds>(system_clock::now().time_since_epoch());
+	microseconds m(maxTime*1000);
 	::maxTime=m;
 
 
@@ -33,13 +33,15 @@ void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int m
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 void Simulation::run() {
 	for(turn=0;;turn++){
-		if(system_clock::now().time_since_epoch()-startTime >= maxTime){
+		microseconds el = duration_cast<microseconds>(system_clock::now().time_since_epoch())-startTime-maxTime;
+		if(el.count() >= 0){
 			break;
 		}
 		Solution sol = population->best();
 		//cout << turn << " " << "  " << sol.evaluateCost() << "  " << population->meanCost()  << " " << population->stdDevCost() << endl;
 		population->nextGeneration();
 		//population->save("pop.txt");
+
 	}
 
 }
