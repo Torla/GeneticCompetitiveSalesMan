@@ -1,5 +1,6 @@
 #include <iostream>
 #include <getopt.h>
+#include <unistd.h>
 
 #include "genetic/Chromosome.h"
 #include "Simulation.h"
@@ -14,7 +15,7 @@ using namespace Simulation;
 
 int main(int argc,char * argv[]) {
 
-
+	clock_t tStart = clock();
 
 
 	Random::init(1);
@@ -28,9 +29,10 @@ int main(int argc,char * argv[]) {
 
 
 	init(20,1,1000,100,1000);
-	run();
+
 
 	cout << bestCost() << endl;
+
 
 	return 0;
 }
