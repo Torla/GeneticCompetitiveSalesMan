@@ -87,7 +87,7 @@ int main(int argc,char * argv[]) {
 
 	init(gSize,minCost,maxCost,popSize,time);
 	run();
-	
-	cout << bestCost();
+
+	cout << bestCost() << endl;
 	return 0;
 }

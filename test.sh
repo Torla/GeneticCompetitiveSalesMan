@@ -4,6 +4,8 @@ cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
 make GeneticCompetitiveSalesMan
 
 
+parProcess=2
+
 filePath="results"
 sortedFilePath="result_sorted"
 
@@ -36,6 +38,7 @@ do
 for bottleNeckRatio in ${bottleNeckRatioSet}
 do
 for disasterRate in ${disasterRateSet}
+
 do
 for mutRate in ${mutRateSet}
 do
@@ -48,10 +51,14 @@ do
     for i in $(seq 1 $testsForCase);
     do
         echo -n -e "\r$i/$testsForCase"
-        value=$(./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerTest} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --popSize ${popSize} --mutRate ${mutRate} --steadyRatio ${steadyRatio} --nearRatio ${nearRatio} --bottleNeckRatio ${bottleNeckRatio} --disasterRate ${disasterRate} |tr -d '\n ')
-        ((sum=sum+value))
+	echo > temp1
+        ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerTest} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --popSize ${popSize} --mutRate ${mutRate} --steadyRatio ${steadyRatio} --nearRatio ${nearRatio} --bottleNeckRatio ${bottleNeckRatio} --disasterRate ${disasterRate}  >> temp1 &
+        if ! ((i%$parProcess)); then
+	wait
+	fi
     done
-    echo $((sum/testsForCase)) >> $filePath
+    wait
+    awk '{ total += $1 } END { print total/NR }' temp1 >> $filePath
 done
 done
 done
