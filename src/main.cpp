@@ -27,6 +27,7 @@ int main(int argc,char * argv[]) {
 
 	init(20,0,1000,100,1000);
 	run();
-
-	return bestCost();
+	
+	cout << bestCost();
+	return 0;
 }
