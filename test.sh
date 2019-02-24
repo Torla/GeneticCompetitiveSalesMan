@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cmake CMakeLists.txt
-make all
+cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
+make GeneticCompetitiveSalesMan
 
 
 filePath="results"
