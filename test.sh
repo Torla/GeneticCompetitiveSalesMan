@@ -16,9 +16,9 @@ timePerTest="1000"
 graphSize="20"
 minCost="1"
 maxCost="1000"
-popSize="100"
+popSize="1000"
 
-steadyRatioSet="0 0.2 0.5 0.7 0.9"
+steadyRatioSet="0.01 0.2 0.5 0.7 0.9"
 mutRateSet="0 0.1 0.5 0.7 1"
 nearRatioSet="0 0.1 0.5 0.8 1"
 bottleNeckRatioSet="0 0.01 0.05 0.1 0.5"
@@ -46,12 +46,10 @@ do
     echo -n "0/$testsForCase"
     echo -n "$steadyRatio,$nearRatio,$bottleNeckRatio,$disasterRate,$mutRate," >> $filePath
 
-    sum=0
-
+    echo > temp1
     for i in $(seq 1 $testsForCase);
     do
         echo -n -e "\r$i/$testsForCase"
-	echo > temp1
         ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerTest} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --popSize ${popSize} --mutRate ${mutRate} --steadyRatio ${steadyRatio} --nearRatio ${nearRatio} --bottleNeckRatio ${bottleNeckRatio} --disasterRate ${disasterRate}  >> temp1 &
         if ! ((i%$parProcess)); then
 	wait
@@ -67,5 +65,5 @@ done
 
 echo -e "All done"
 
-sort -k6 -n -t ',' $filePath >> $sortedFilePath
+sort -k6 -n -t ',' $filePath > $sortedFilePath
 
