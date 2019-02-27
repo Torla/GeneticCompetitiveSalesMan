@@ -7,7 +7,7 @@ make GeneticCompetitiveSalesMan
 parProcess=2
 
 filePath="results"
-sortedFilePath="result_sorted"
+sortedFilePath="results_sorted"
 
 testsForCase="10"
 
@@ -16,8 +16,8 @@ timePerTest="1000"
 graphSize="20"
 minCost="1"
 maxCost="1000"
-popSize="1000"
 
+popSizeSet="100 1000 5000 10000"
 steadyRatioSet="0.01 0.2 0.5 0.7 0.9"
 mutRateSet="0 0.1 0.5 0.7 1"
 nearRatioSet="0 0.1 0.5 0.8 1"
@@ -29,8 +29,9 @@ disasterRateSet="0 0.01 0.05 0.1 0.5"
 echo "starting script test"
 
 
-echo "steady,near,bottle,disa,mut,avg " > $filePath
-
+echo "popsize,steady,near,bottle,disa,mut,avg " > $filePath
+for popSize in ${popSizeSet};
+do
 for steadyRatio in ${steadyRatioSet};
 do
 for nearRatio in ${nearRatioSet}
@@ -42,9 +43,9 @@ for disasterRate in ${disasterRateSet}
 do
 for mutRate in ${mutRateSet}
 do
-    echo -e "\r$steadyRatio,$nearRatio,$bottleNeckRatio,$disasterRate,$mutRate"
+    echo -e "\r$popSize,$steadyRatio,$nearRatio,$bottleNeckRatio,$disasterRate,$mutRate"
     echo -n "0/$testsForCase"
-    echo -n "$steadyRatio,$nearRatio,$bottleNeckRatio,$disasterRate,$mutRate," >> $filePath
+    echo -n "$popSize,$steadyRatio,$nearRatio,$bottleNeckRatio,$disasterRate,$mutRate," >> $filePath
 
     echo > temp1
     for i in $(seq 1 $testsForCase);
@@ -62,8 +63,7 @@ done
 done
 done
 done
-
-echo -e "All done"
-
+done
+echo "sorting"
 sort -k6 -n -t ',' $filePath > $sortedFilePath
-
+echo "all done"
