@@ -29,11 +29,12 @@ int main(int argc,char * argv[]) {
 				{"nearRatio",    required_argument, 0, 'N'},
 				{"bottleNeckRatio",required_argument,0,'B'},
 				{"disasterRate", required_argument, 0, 'D'},
+				{"greedy",        no_argument,      0, 'G'},
 				{"traffic",      no_argument,       0, 'T'}
 		};
 		int index;
 		int c=-1;
-		c = getopt_long(argc, argv, "sgmMStudNDT", long_option, &index);
+		c = getopt_long(argc, argv, "sgmMStudNDTG", long_option, &index);
 		if(c==-1) {
 			break;
 		};
@@ -70,6 +71,9 @@ int main(int argc,char * argv[]) {
 				break;
 			case 'D':
 				Population::setDisasterRate(atof(optarg));
+				break;
+			case 'G':
+				Population::setGreedy(true);
 				break;
 			case 'T':
 				Population::setTraffic(true);

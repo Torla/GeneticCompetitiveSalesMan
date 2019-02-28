@@ -6,6 +6,8 @@
 #define GENETICCOMPETITIVESALESMAN_CHROMOSOME_H
 
 
+#include <utility>
+
 #include "../solution/Solution.h"
 #include "../Rand.h"
 
@@ -16,6 +18,7 @@ private:
 	static Solution mutation(Solution so1);
 public:
 	explicit Chromosome(const Graph *graph):Solution(graph){}
+	Chromosome(Solution solution):Solution(std::move(solution)){}
 	Chromosome(const Chromosome& c1,const Chromosome& c2):Solution(mutation(order1CrossOver(c1,c2))){
 	}
 

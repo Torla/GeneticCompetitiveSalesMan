@@ -11,7 +11,7 @@
 #include <fstream>
 #include <memory>
 #include "Chromosome.h"
-
+#include "../Greedy/Greedy.h"
 
 
 class Population {
@@ -23,6 +23,7 @@ private:
 	static bool traffic;
 	static float disasterRate;
 	static float disasterGravity;
+	static bool greedy;
 
 	std::vector<std::shared_ptr<Chromosome>> pop;
 	Graph *graphWithTraffic;
@@ -39,8 +40,19 @@ public:
 
 		graphWithTraffic = new Graph(*graph);
 
+		std::vector<Solution> g;
+
+		if(greedy){
+			g = Greedy::gen(*graphWithTraffic);
+		}
+
 		for(int i=0;i<size;i++){
-			pop[i].reset(new Chromosome(graphWithTraffic));
+			if(i<g.size()){
+				pop[i].reset(new Chromosome(g[i]));
+			}
+			else {
+				pop[i].reset(new Chromosome(graphWithTraffic));
+			}
 		}
 
 		std::sort(pop.begin(),pop.end(),Population::solComp);
@@ -69,6 +81,9 @@ public:
 	}
 	static void setDisasterGravity(float disasterGravity) {
 		Population::disasterGravity = disasterGravity;
+	}
+	static void setGreedy(bool greedy) {
+		Population::greedy = greedy;
 	}
 
 	unsigned int size()const{

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
-make GeneticCompetitiveSalesMan
-
-
 parProcess=2
 
 filePath="results"
@@ -24,6 +20,9 @@ nearRatioSet="0 0.1 0.5 0.8 1"
 bottleNeckRatioSet="0 0.01 0.05 0.1 0.5"
 disasterRateSet="0 0.01 0.05 0.1 0.5"
 
+
+cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
+make GeneticCompetitiveSalesMan
 
 
 echo "starting script test"
@@ -51,7 +50,7 @@ do
     for i in $(seq 1 $testsForCase);
     do
         echo -n -e "\r$i/$testsForCase"
-        ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerTest} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --popSize ${popSize} --mutRate ${mutRate} --steadyRatio ${steadyRatio} --nearRatio ${nearRatio} --bottleNeckRatio ${bottleNeckRatio} --disasterRate ${disasterRate}  >> temp1 &
+        ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerTest} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --greedy --popSize ${popSize} --mutRate ${mutRate} --steadyRatio ${steadyRatio} --nearRatio ${nearRatio} --bottleNeckRatio ${bottleNeckRatio} --disasterRate ${disasterRate}  >> temp1 &
         if ! ((i%$parProcess)); then
 	wait
 	fi

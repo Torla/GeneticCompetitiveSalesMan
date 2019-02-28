@@ -12,6 +12,7 @@ float  Population::bottleNeckGravity=0.1;
 float  Population::disasterRate=0;
 float  Population::disasterGravity=0.1;
 bool   Population::traffic=false;
+bool   Population::greedy= false;
 
 bool Population::solComp(const std::shared_ptr<Chromosome> a, const std::shared_ptr<Chromosome> b) {
 	return (a->evaluateCost()<b->evaluateCost());
