@@ -16,7 +16,7 @@ maxCost="1000"
 popSizeSet="100 1000 5000 10000"
 steadyRatioSet="0.01 0.2 0.5 0.7 0.9"
 mutRateSet="0 0.1 0.5 0.7 1"
-nearRatioSet="0 0.1 0.5 0.8 1"
+nearRatioSet="0"
 bottleNeckRatioSet="0 0.01 0.05 0.1 0.5"
 disasterRateSet="0 0.01 0.05 0.1 0.5"
 
@@ -64,5 +64,5 @@ done
 done
 done
 echo "sorting"
-sort -k6 -n -t ',' $filePath > $sortedFilePath
+sort -k7 -g -t ',' $filePath > $sortedFilePath
 echo "all done"
