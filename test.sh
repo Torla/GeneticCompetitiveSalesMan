@@ -28,7 +28,7 @@ make GeneticCompetitiveSalesMan
 echo "starting script test"
 
 
-echo "popsize,steady,near,bottle,disa,mut,avg " > $filePath
+echo "popsize,steady,near,bottle,disa,mut,turn,avg " > $filePath
 for popSize in ${popSizeSet};
 do
 for steadyRatio in ${steadyRatioSet};
@@ -52,11 +52,13 @@ do
         echo -n -e "\r$i/$testsForCase"
         ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerTest} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --greedy --popSize ${popSize} --mutRate ${mutRate} --steadyRatio ${steadyRatio} --nearRatio ${nearRatio} --bottleNeckRatio ${bottleNeckRatio} --disasterRate ${disasterRate}  >> temp1 &
         if ! ((i%$parProcess)); then
-	wait
-	fi
+	        wait
+	    fi
     done
     wait
-    awk '{ total += $1 } END { print total/NR }' temp1 >> $filePath
+    awk 'BEGIN{ORS=","}{ total += $1 } END { print total/NR }' temp1 >> $filePath
+    echo -n -e " " >> $filePath
+    awk 'BEGIN{ORS="\n"}{ total += $2 } END { print total/NR }' temp1 >> $filePath
 done
 done
 done
@@ -64,5 +66,5 @@ done
 done
 done
 echo "sorting"
-sort -k7 -g -t ',' $filePath > $sortedFilePath
+sort -k8 -g -t ',' $filePath > $sortedFilePath
 echo "all done"

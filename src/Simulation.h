@@ -14,6 +14,7 @@ namespace Simulation {
 	void  init(unsigned int nodeNums,unsigned int minCost,unsigned int maxCost,unsigned int popSize, unsigned int maxTime);
 	void run();
 	int bestCost();
+	int getTurn();
 
 };
 

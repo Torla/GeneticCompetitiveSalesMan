@@ -19,6 +19,8 @@ clock_t startTime;
 int maxTime;
 
 void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int maxCost,unsigned int popSize, unsigned int maxTime) {
+	turn=0;
+
 	graph.reset(new Graph(nodeNums,minCost,maxCost));
 	population.reset(new Population(graph.get(),popSize));
 
@@ -30,7 +32,7 @@ void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int m
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 void Simulation::run() {
-	for(turn=0;;turn++){
+	for(turn;;turn++){
 		int el = ((clock()- startTime)*1000)/CLOCKS_PER_SEC;
 		if(el >= maxTime){
 			break;
@@ -47,4 +49,8 @@ void Simulation::run() {
 
 int Simulation::bestCost(){
 	return population->best().evaluateCost();
+}
+
+int Simulation::getTurn() {
+	return turn;
 }

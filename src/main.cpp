@@ -92,6 +92,6 @@ int main(int argc,char * argv[]) {
 	init(gSize,minCost,maxCost,popSize,time);
 	run();
 
-	cout << bestCost() << endl;
+	cout << getTurn() << " " << bestCost()  << endl;
 	return 0;
 }
