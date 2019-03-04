@@ -8,6 +8,9 @@ sortedFilePath="results_sorted"
 testsForCase="10"
 
 
+computeBenchmark=true
+timePerBenchmark="100000"
+
 timePerTest="1000"
 graphSize="20"
 minCost="1"
@@ -27,6 +30,14 @@ make GeneticCompetitiveSalesMan
 
 echo "starting script test"
 
+echo "benchMark computation"
+if (${computeBenchmark}==1); then
+    for i in $(seq 1 ${testsForCase});
+    do
+            ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerBenchmark} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --greedy --popSize 1000 --mutRate 0.5 --steadyRatio 0.7 --nearRatio 0 --bottleNeckRatio 0.1 --disasterRate 0.01 | cat " ${i}"  >> benchmark &
+
+    done
+fi
 
 echo "popsize,steady,near,bottle,disa,mut,turn,avg " > $filePath
 for popSize in ${popSizeSet};
