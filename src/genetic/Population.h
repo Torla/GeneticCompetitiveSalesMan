@@ -38,7 +38,11 @@ private:
 public:
 	explicit Population(const Graph *graph,unsigned int size):pop(size),graph(graph){
 
-		graphWithTraffic = new Graph(*graph);
+		if(traffic){
+			graphWithTraffic = new Graph(*graph);
+		} else{
+			graphWithTraffic = const_cast<Graph *>(graph); //todo const discarded (bad)
+		}
 
 		std::vector<Solution> g;
 

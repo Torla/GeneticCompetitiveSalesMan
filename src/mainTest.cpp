@@ -16,8 +16,6 @@ using namespace Simulation;
 
 int main(int argc,char * argv[]) {
 
-	clock_t tStart = clock();
-
 
 	Random::init(1);
 
@@ -30,7 +28,7 @@ int main(int argc,char * argv[]) {
 	Population::setGreedy(false);
 
 
-	init(20,1,1000,1000,1000);
+	init(20,1,1000,1000,100000);
 	run();
 
 

@@ -24,6 +24,7 @@ void  Simulation::init(unsigned int nodeNums,unsigned int minCost,unsigned int m
 	graph.reset(new Graph(nodeNums,minCost,maxCost));
 	population.reset(new Population(graph.get(),popSize));
 
+
 	startTime =clock();
 	::maxTime=maxTime;
 
@@ -38,7 +39,7 @@ void Simulation::run() {
 			break;
 		}
 		Solution sol = population->best();
-		//cout << turn << " " << "  " << sol.evaluateCost() << "  " << population->meanCost()  << " " << population->stdDevCost() << endl;
+		//cout << turn << " " << "  " << sol.evaluateCost() <<  endl;
 		population->nextGeneration();
 		//population->save("pop.txt");
 
