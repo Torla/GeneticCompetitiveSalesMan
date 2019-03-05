@@ -119,12 +119,17 @@ void Population::rouletteWheel(std::vector<std::shared_ptr<Chromosome>> &parentC
 		int sumD=0;
 		for(unsigned int x=0;x<pop.size();x++){
 			unsigned int d=parentCouples[i]->distance(*pop.at(x));
-			probD[x]=graph->size()-d;
+			if(nearRatio>0) {
+				probD[x] = graph->size() - d;
+			}
+			else{
+				probD[x] = d;
+			}
 			sumD+=probD[x];
 		}
 		if(sumD==0) sumD=1;
 		for(unsigned int x=0;x<pop.size();x++){
-			probD[x]= static_cast<unsigned int>(((probD[x] * precision * nearRatio ) / sumD) + prob[x] * (1 - nearRatio));
+			probD[x]= static_cast<unsigned int>(((probD[x] * precision * fabs(nearRatio) ) / sumD) + prob[x] * (1 - fabs(nearRatio)));
 		}
 		probDS[0]=0;
 		for(unsigned int x=1;x<pop.size();x++){
