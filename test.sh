@@ -19,8 +19,8 @@ maxCost="1000"
 popSizeSet="1000"
 steadyRatioSet="0.01 0.2 0.5 0.7 0.9"
 mutRateSet="0 0.1 0.5 0.7 1"
-nearRatioSet="0"
-bottleNeckRatioSet="0 0.01 0.05 0.1 0.5"
+nearRatioSet="-1 -0.5 0 0.5 1"
+bottleNeckRatioSet="0"
 disasterRateSet="0"
 
 
@@ -97,5 +97,5 @@ done
 done
 done
 echo "sorting"
-sort -k9 -g -t ',' $filePath > $sortedFilePath
+awk 'NR == 1; NR > 1 {print $0 | "sort -k9 -f -t ','"}' $filePath > $sortedFilePath
 echo "all done"
