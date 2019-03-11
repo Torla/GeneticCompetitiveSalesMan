@@ -5,13 +5,13 @@ parProcess=2
 filePath="results"
 sortedFilePath="results_sorted"
 
-testsForCase="10"
+testsForCase="5"
 
 
-computeBenchmark=true
-timePerBenchmark="100000"
+computeBenchmark="true"
+timePerBenchmark="1000"
 
-timePerTest="1000"
+timePerTest="100"
 graphSize="20"
 minCost="1"
 maxCost="1000"
@@ -30,16 +30,34 @@ make GeneticCompetitiveSalesMan
 
 echo "starting script test"
 
-echo "benchMark computation"
-if (${computeBenchmark}==1); then
+
+if [ $computeBenchmark = true ] ; then
+	echo "benchMark computation"
+	echo -n "0/$testsForCase"
+	echo -e -n " " > benchMark
     for i in $(seq 1 ${testsForCase});
     do
-            ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerBenchmark} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --greedy --popSize 1000 --mutRate 0.5 --steadyRatio 0.7 --nearRatio 0 --bottleNeckRatio 0.1 --disasterRate 0.01 | cat " ${i}"  >> benchmark &
-
+            ./GeneticCompetitiveSalesMan --seed ${i} --time ${timePerBenchmark} --graphSize ${graphSize} --graphMinCost ${minCost} --graphMaxCost ${maxCost} --greedy --popSize 1000 --mutRate 0.5 --steadyRatio 0.7 --nearRatio 0 --bottleNeckRatio 0.1 --disasterRate 0.01 | awk -v i=${i} '{print $2","i}' >> benchmark &
+			pidV[${i}]=$!
     done
+    for i in $(seq 1 ${testsForCase});
+    do
+		wait ${pidV[$i]}
+		echo -n -e "\r$i/$testsForCase"
+	done
+	cat benchmark | sort -k2 -n -t "," |column -s "," -t| awk '{print $1" "$2}' > benchmark
+	for i in $(awk '{print $1}' benchmark);
+	do
+	    bench[${i}]=${i}
+	    echo ${bench[${i}]}
+	done
+	echo -e "\n"
+	echo "benchMark Done"
 fi
 
-echo "popsize,steady,near,bottle,disa,mut,turn,avg " > $filePath
+
+
+echo "popsize,steady,near,bottle,disa,mut,turn,avg,avgRel " > $filePath
 for popSize in ${popSizeSet};
 do
 for steadyRatio in ${steadyRatioSet};
@@ -57,7 +75,7 @@ do
     echo -n "0/$testsForCase"
     echo -n "$popSize,$steadyRatio,$nearRatio,$bottleNeckRatio,$disasterRate,$mutRate," >> $filePath
 
-    echo > temp1
+    rm temp1
     for i in $(seq 1 $testsForCase);
     do
         echo -n -e "\r$i/$testsForCase"
@@ -69,7 +87,9 @@ do
     wait
     awk 'BEGIN{ORS=","}{ total += $1 } END { print total/NR }' temp1 >> $filePath
     echo -n -e " " >> $filePath
-    awk 'BEGIN{ORS="\n"}{ total += $2 } END { print total/NR }' temp1 >> $filePath
+	var=$(awk -v sep=',' 'BEGIN{ORS=OFS="";for(i=1;i<ARGC;i++){print ARGV[i],sep}}' "${bench[@]}")
+    awk -v arr=${var} 'BEGIN{ORS=",";arr=split(arr,ben,",")}{ total += $2; totalRel += $2/(ben[FNR])} END { print total/NR; print totalRel/NR}' temp1 >> $filePath
+	echo -n -e "\n" >> $filePath
 done
 done
 done
