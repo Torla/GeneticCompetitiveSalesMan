@@ -1,27 +1,27 @@
 #!/bin/bash
 
-parProcess=2
+parProcess=4
 
 filePath="results"
 sortedFilePath="results_sorted"
 
-testsForCase="5"
+testsForCase="4"
 
 
 computeBenchmark="true"
-timePerBenchmark="1000"
+timePerBenchmark="10000"
 
-timePerTest="100"
+timePerTest="1000"
 graphSize="20"
 minCost="1"
 maxCost="1000"
 
-popSizeSet="100 1000 5000 10000"
+popSizeSet="1000"
 steadyRatioSet="0.01 0.2 0.5 0.7 0.9"
 mutRateSet="0 0.1 0.5 0.7 1"
 nearRatioSet="0"
 bottleNeckRatioSet="0 0.01 0.05 0.1 0.5"
-disasterRateSet="0 0.01 0.05 0.1 0.5"
+disasterRateSet="0"
 
 
 cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
@@ -57,7 +57,7 @@ fi
 
 
 
-echo "popsize,steady,near,bottle,disa,mut,turn,avg,avgRel " > $filePath
+echo "popsize,steady,near,bottle,disa,mut,turn,avg,avgRel,stDev " > $filePath
 for popSize in ${popSizeSet};
 do
 for steadyRatio in ${steadyRatioSet};
@@ -88,7 +88,7 @@ do
     awk 'BEGIN{ORS=","}{ total += $1 } END { print total/NR }' temp1 >> $filePath
     echo -n -e " " >> $filePath
 	var=$(awk -v sep=',' 'BEGIN{ORS=OFS="";for(i=1;i<ARGC;i++){print ARGV[i],sep}}' "${bench[@]}")
-    awk -v arr=${var} 'BEGIN{ORS=",";arr=split(arr,ben,",")}{ total += $2; totalRel += $2/(ben[FNR])} END { print total/NR; print totalRel/NR}' temp1 >> $filePath
+    awk -v arr=${var} 'BEGIN{ORS=",";arr=split(arr,ben,",")}{ total += $2;totalRel += $2/(ben[FNR]);totalSq += ($2/(ben[FNR])*$2/(ben[FNR]))} END { print total/NR; print totalRel/NR; print (totalSq - ((totalRel)*(totalRel))/NR)/NR}' temp1 >> $filePath
 	echo -n -e "\n" >> $filePath
 done
 done
@@ -97,5 +97,5 @@ done
 done
 done
 echo "sorting"
-sort -k8 -g -t ',' $filePath > $sortedFilePath
+sort -k9 -g -t ',' $filePath > $sortedFilePath
 echo "all done"
